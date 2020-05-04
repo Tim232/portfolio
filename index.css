@@ -1,19 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    color: black;
-    background-color: white;
     font-family: 'Noto Sans KR', Arial, Helvetica, sans-serif;
 }
+
+body{-ms-user-select:none;-moz-user-select:-moz-none;-webkit-user-select:none;-khtml-user-select:none;user-select:none;margin:0;}
 
 button {
     cursor: pointer;
     outline: none;
+    background-color: white;
+}
+
+a{text-decoration:none;}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 60vh;
 }
 
 .buttons {
     display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.buttons button {
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.buttons button:active {
+    transform:scale(0.97);
+}
+
+.githubBtn {
+    background-color: black;
+}
+
+.profileImg img {
+    border-radius: 50%;
+    border: 2px solid #eee;
 }
