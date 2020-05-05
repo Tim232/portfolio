@@ -38,7 +38,7 @@ hr {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100vw;
+    width: 100vmax;
     height: 100vh;
 }
 
@@ -53,10 +53,7 @@ hr {
     font-size: 20px;
     font-weight: 600;
     margin: 10px;
-}
-
-.buttons button:active {
-    transform: scale(0.97);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .1), 3px 3px 3px rgba(0, 0, 0, .1);
 }
 
 .profileImg img {
@@ -74,7 +71,7 @@ hr {
     margin: 0 10px 10px 10px;
     border: 2px solid #eee;
     border-radius: 20px;
-    width: 35vh;
+    width: 20vw;
     height: 8vh;
     align-items: center;
 }
@@ -95,7 +92,7 @@ hr {
 }
 
 .projectTitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -103,6 +100,6 @@ hr {
     color: blue;
 }
 
-.project:active {
+.project:active, .buttons button:active {
     transform: scale(0.98);
 }
