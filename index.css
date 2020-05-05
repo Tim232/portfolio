@@ -21,10 +21,11 @@ button {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 hr {
-    width: 95vw;
+    width: 90vw;
     background-color: #eee;
     text-align: center;
     padding: 1px;
@@ -38,7 +39,7 @@ hr {
     justify-content: center;
     flex-direction: column;
     width: 100vw;
-    height: 60vh;
+    height: 100vh;
 }
 
 .buttons {
@@ -47,9 +48,11 @@ hr {
 }
 
 .buttons button {
-    border: 1px solid #eee;
-    border-radius: 3vh;
-    font-size: 15px;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px;
 }
 
 .buttons button:active {
@@ -61,7 +64,45 @@ hr {
     border: 2px solid rgb(252, 252, 252);
 }
 
-.title {
+.nickname {
     font-size: xx-large;
     font-weight: bold;
+    margin: 13px;
+}
+
+.project {
+    margin: 0 10px 10px 10px;
+    border: 2px solid #eee;
+    border-radius: 20px;
+    width: 35vh;
+    height: 8vh;
+    align-items: center;
+}
+
+.projectMainTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 7px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid #eee;
+    border-radius: 20px;
+    margin: 15px;
+}
+
+.projectTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.projectDesc a {
+    color: blue;
+}
+
+.project:active {
+    transform: scale(0.98);
 }
