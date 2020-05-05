@@ -100,6 +100,6 @@ hr {
     color: blue;
 }
 
-.project:active, .buttons button:active {
+.project:active, .buttons button:active, .projects:active {
     transform: scale(0.98);
 }
