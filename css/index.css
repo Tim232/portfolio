@@ -11,17 +11,17 @@ body {
     -khtml-user-select: none;
     user-select: none;
     margin: 0;
+    color: black;
+    background-color: white;
 }
 
 button {
     cursor: pointer;
     outline: none;
-    background-color: white;
 }
 
 a {
     text-decoration: none;
-    color: black;
 }
 
 hr {
@@ -93,12 +93,28 @@ hr {
 .projectTitle {
     font-size: 1.2rem;
     font-weight: 600;
+    color: black;
+}
+
+.projectTitle a {
+    color: black;
+}
+
+.projectDesc {
+    color: black;
 }
 
 .projectDesc a {
     color: blue;
 }
 
-.project:active, .buttons button:active, .projects:active {
+.buttons button:active, .projects:active {
     transform: scale(0.98);
+}
+
+.theme-change {
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 17.5px;
 }
