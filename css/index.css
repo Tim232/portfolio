@@ -119,3 +119,11 @@ hr {
     border-radius: 10px;
     font-size: 17.5px;
 }
+
+.noscript {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
