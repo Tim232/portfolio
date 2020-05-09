@@ -97,11 +97,7 @@ hr {
     color: black;
 }
 
-.projectTitle a {
-    color: black;
-}
-
-.projectDesc {
+.projectDesc, .projectTitle a {
     color: black;
 }
 
@@ -111,13 +107,6 @@ hr {
 
 .buttons button:active, .projects:active {
     transform: scale(0.98);
-}
-
-.theme-change {
-    margin-top: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: 17.5px;
 }
 
 .noscript {
