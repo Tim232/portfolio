@@ -5,114 +5,82 @@
 }
 
 body {
-    -ms-user-select: none;
-    -moz-user-select: -moz-none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    user-select: none;
     margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
     color: black;
-    background-color: white;
 }
 
 button {
     cursor: pointer;
     outline: none;
-    background-color: white;
 }
 
-a {
-    text-decoration: none;
-}
-
-hr {
-    width: 90vw;
-    background-color: #eee;
+.main, .footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    padding: 1px;
-    margin: 20px;
-    border: none;
+}
+
+.nav {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 8vh;
 }
 
 .main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 120vh;
+    height: 70vh;
 }
 
-.buttons {
-    display: flex;
-    flex-direction: column;
-}
-
-.buttons button {
-    border: 2px solid black;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 10px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, .1), 3px 3px 3px rgba(0, 0, 0, .1);
-}
-
-.profileImg img {
+.profile img {
     border-radius: 50%;
-    border: 2px solid rgb(252, 252, 252);
+    width: 15vh;
+}
+
+.nav-div {
+    margin-right: 1.2vh;
+    display: inline;
+    font-size: 2.4vh;
 }
 
 .nickname {
-    font-size: xx-large;
-    font-weight: bold;
-    margin: 13px;
+    font-size: 5vh;
+    margin-top: 1.5vh;
 }
 
-.project {
-    margin: 0 10px 10px 10px;
-    border: 2px solid #eee;
-    border-radius: 20px;
-    width: 42vh;
-    height: 8vh;
-    align-items: center;
+.github {
+    border-radius: 5vh;
+    border: 0;
+    background-color: black;
+    color: white;
+    box-shadow: 3px 3px 3px rgba(150, 150, 150, 0), 3px 3px 3px rgba(150, 150, 150, 0);
+    font-size: 2.6vh;
 }
 
-.projectMainTitle {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 7px;
-}
-
-.projects {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    border: 2px solid #eee;
-    border-radius: 20px;
-    margin: 15px;
-}
-
-.projectTitle {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: black;
-}
-
-.projectDesc, .projectTitle a {
-    color: black;
-}
-
-.projectDesc a {
-    color: blue;
-}
-
-.buttons button:active, .projects:active {
+.github:active {
     transform: scale(0.98);
 }
 
-.noscript {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.intro-main {
+    font-size: 2.7vh;
+    margin: 1vh 0 1.2vh 0;
+}
+
+hr {
     margin: 0;
-    padding: 0;
+    border: 0.1px solid black;
+    width: 85%;
+}
+
+@media screen and (max-height: 300px) {
+
 }
