@@ -20,7 +20,7 @@ button {
     outline: none;
 }
 
-.main, .footer {
+.main, .footer, .nav {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -29,11 +29,6 @@ button {
 }
 
 .nav {
-    display: flex;
-    align-items: left;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
     height: 8vh;
 }
 
@@ -61,9 +56,11 @@ button {
     border-radius: 5vh;
     border: 0;
     background-color: black;
-    color: white;
-    box-shadow: 3px 3px 3px rgba(150, 150, 150, 0), 3px 3px 3px rgba(150, 150, 150, 0);
     font-size: 2.6vh;
+}
+
+.github a {
+    color: white;
 }
 
 .github:active {
@@ -75,12 +72,17 @@ button {
     margin: 1vh 0 1.2vh 0;
 }
 
+footer, .footer-link {
+    font-size: 2.1vh;
+    margin-top: 0.5vh;
+}
+
 hr {
-    margin: 0;
-    border: 0.1px solid black;
+    margin-bottom: 3vh;
+    border: .1px solid black;
     width: 85%;
 }
 
 @media screen and (max-height: 300px) {
-
+    
 }
