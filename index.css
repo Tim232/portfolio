@@ -139,4 +139,8 @@ header, #main, #about, #projects {
     header {
         height: 10vh;
     }
+
+    .project {
+        width: 25vh;
+    }
 }
