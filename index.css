@@ -32,7 +32,11 @@ header a {
     margin-bottom: 1vh;
 }
 
-header, #main, #about, #projects {
+footer {
+    height: 10vh;
+}
+
+header, footer, #main, #about, #projects, #skils {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,12 +61,16 @@ header, #main, #about, #projects {
     height: 60vh;
 }
 
+#skils {
+    height: 50vh;
+}
+
 .project {
     border: 1px solid black;
     border-radius: 5vh;
     text-align: center;
     padding: 1vh;
-    width: 23vw;
+    width: 40vh;
     margin-bottom: 2vh;
 }
 
@@ -70,8 +78,8 @@ header, #main, #about, #projects {
     font-size: 3vh;
 }
 
-.project-img {
-    width: 5vh;
+.project-img, .skils-img {
+    width: 7vh;
 }
 
 .project-github {
@@ -138,9 +146,5 @@ header, #main, #about, #projects {
 @media (max-width: 500px) {
     header {
         height: 10vh;
-    }
-
-    .project {
-        width: 25vh;
     }
 }
