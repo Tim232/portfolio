@@ -82,10 +82,21 @@ header, footer, #main, #about, #projects, #skils {
     width: 7vh;
 }
 
-.project-github {
+.contact p {
+    margin-top: 1vh;
+}
+
+.project-github, .button-github {
     background-color: black;
     color: white;
-    border: none;
+    border-radius: 2vh;
+    padding: 0.5vh;
+    font-size: 2vh;
+}
+
+.button-discord {
+    background-color: #7289da;
+    color: white;
     border-radius: 2vh;
     padding: 0.5vh;
     font-size: 2vh;
@@ -145,6 +156,6 @@ header, footer, #main, #about, #projects, #skils {
 
 @media (max-width: 500px) {
     header {
-        height: 10vh;
+        height: 12vh;
     }
 }
