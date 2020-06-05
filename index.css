@@ -1,14 +1,82 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+@import url(//fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap);
 
-* {
-    font-family: 'Noto Sans KR';
+body {
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
-.main {
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    margin-bottom: 2vh;
+    height: 15vh;
+    background-color: white;
+    border-bottom: 0.5px solid gray;
+}
+
+header a {
+    margin-bottom: 1vh;
+}
+
+header, #main, #about, #projects {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 40vh;
-    font-size: 3.5vh;
+    align-items: center;
+}
+
+#main {
+    height: 65vh;
+}
+
+#about {
+    margin-top: 20vh;
+    height: 50vh;
+}
+
+#profile-img {
+    border-radius: 50%;
+    width: 17.5vh;
+    
+}
+
+.margin {
+    margin-bottom: 2.5vh;
+}
+
+.main-title {
+    font-size: 3vh;
+}
+
+.title {
+    font-size: 4vh;
+}
+
+.description {
+    font-size: 2.5vh;
+    text-align: center;
+}
+
+#about-btn {
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+    border-radius: 2vh;
+    padding: 1.5vh;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 1.5vh;
+    background-color: rgb(187, 187, 187);
+    border-radius: 2.5vh;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 2.5vh;
 }
