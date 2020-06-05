@@ -2,11 +2,21 @@
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: hsl(64, 100%, 83%);
 }
 
 a {
     color: black;
     text-decoration: none;
+}
+
+p {
+    margin: 0;
 }
 
 header {
@@ -34,26 +44,67 @@ header, #main, #about, #projects {
 }
 
 #about {
-    margin-top: 20vh;
+    margin-top: 10vh;
     height: 50vh;
 }
 
 #profile-img {
     border-radius: 50%;
     width: 17.5vh;
-    
+}
+
+#projects {
+    height: 60vh;
+}
+
+.project {
+    border: 1px solid black;
+    border-radius: 5vh;
+    text-align: center;
+    padding: 1vh;
+    width: 23vw;
+    margin-bottom: 2vh;
+}
+
+.project-title {
+    font-size: 3vh;
+}
+
+.project-img {
+    width: 5vh;
+}
+
+.project-github {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 2vh;
+    padding: 0.5vh;
+    font-size: 2vh;
+}
+
+.project-site {
+    border: 1px solid black;
+    border-radius: 2vh;
+    padding: 0.5vh;
+    font-size: 2vh;
+}
+
+.project-site:hover {
+    background-color: black;
+    color: white;
+}
+
+.margin-top {
+    margin-top: 2vh;
 }
 
 .margin {
     margin-bottom: 2.5vh;
 }
 
-.main-title {
-    font-size: 3vh;
-}
-
 .title {
-    font-size: 4vh;
+    font-size: 4.5vh;
 }
 
 .description {
@@ -62,7 +113,6 @@ header, #main, #about, #projects {
 }
 
 #about-btn {
-    border: 1px solid blue;
     background-color: blue;
     color: white;
     border-radius: 2vh;
@@ -70,13 +120,23 @@ header, #main, #about, #projects {
     cursor: pointer;
 }
 
+#about-btn:hover {
+    background-color: hsl(226, 100%, 58%);
+}
+
 ::-webkit-scrollbar {
     width: 1.5vh;
-    background-color: rgb(187, 187, 187);
+    background-color: rgb(216, 216, 216);
     border-radius: 2.5vh;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: gray;
     border-radius: 2.5vh;
+}
+
+@media (max-width: 500px) {
+    header {
+        height: 10vh;
+    }
 }
