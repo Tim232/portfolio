@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-Sitemap: https://ditto7890.ga/sitemap.xml
+Sitemap: https://www.ditto7890.ga/sitemap.xml
