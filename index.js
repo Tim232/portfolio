@@ -1,0 +1,1 @@
+document.body.addEventListener('dragstart', event => event.preventDefault())
