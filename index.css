@@ -13,8 +13,8 @@ body {
 
 img {
     border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     vertical-align: middle;
 }
 
@@ -151,6 +151,17 @@ img, .icon-text, #main, #skils, #icon {
     color: white;
     text-decoration: none;
     font-size: 1.75rem;
+}
+
+.projects {
+    display: flex;
+}
+
+.project {
+    background-color: #151922;
+    border: 1px solid white;
+    border-radius: 10px;
+    
 }
 
 @keyframes move {
