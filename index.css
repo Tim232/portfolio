@@ -155,13 +155,21 @@ img, .icon-text, #main, #skils, #icon {
 
 .projects {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project {
     background-color: #151922;
     border: 1px solid white;
     border-radius: 10px;
-    
+    padding: 10px;
+    margin: 0 10px;
+    width: 17.5rem;
+}
+
+.project-title {
+    font-size: 1.1rem;
 }
 
 @keyframes move {
