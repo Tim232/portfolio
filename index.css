@@ -1,80 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@400;700&family=Poppins&display=swap');
+
+@font-face {
+    font-family: 'CookieRunOTF-Black';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Black00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CookieRunOTF-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
     margin: 0;
     padding: 0;
-    color: white;
+    color: #fff;
+    background-color: #080513;
 }
 
 img {
     border-radius: 50%;
     width: 3.5rem;
     height: 3.5rem;
-    vertical-align: middle;
+}
+
+a  {
+    text-decoration: none;
 }
 
 img, .icon-text, #main, #skils, #icon {
     user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-}
-
-.title {
-    vertical-align: middle;
-    font-size: 2.75rem;
-    font-weight: 700;
-    margin-left: 7.5px;
 }
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
-    background-color: white;
+    background-color: #fff;
 }
 
-.section {
-    text-align: center;
+#main {
+    margin: 1rem 0;
+}
+
+#main > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'CookieRunOTF-Bold', sans-serif;
+}
+
+#profile {
+    font-family: 'CookieRunOTF-Black', sans-serif;
+    margin-right: 8px;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#tools {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 102;
+}
+
+#settings {
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255, .8);
+    font-size: 1.15rem;
+    transition: .2s ease-in-out;
+}
+
+#settings:hover {
+    color: #fff;
+}
+
+#settings-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 101;
+}
+
+#setting-reset {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 1.25rem;
+}
+
+#setting-reset:active {
+    transform: scale(0.9) rotate(10deg);
+}
+
+.section, #settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .section:first-child {
-    background-image: url(img/background.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    position: relative;
 }
 
 .section:first-child p {
     font-size: 1.1rem;
-}
-
-.section:nth-child(2), .section:nth-child(3) {
-    background-color: #080513;
+    font-family: 'Poppins', sans-serif;
 }
 
 .arrow {
-    display: block;
-    margin: 25px auto;
+    margin-top: 15px;
     width: 25px;
     height: 25px;
     border-right: 2.5px solid #fff;
     border-bottom: 2.5px solid #fff;
     animation: move 1.75s infinite;
-    -webkit-animation: move 1.75s infinite;
-    -moz-animation: move 1.75s infinite;
-    -ms-animation: move 1.75s infinite;
-    -o-animation: move 1.75s infinite;
     transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    cursor: pointer;
-}
-
-#skils img {
-    border-radius: 0 !important;
-    margin: 0 7px;
     cursor: pointer;
 }
 
@@ -90,109 +154,32 @@ img, .icon-text, #main, #skils, #icon {
 }
 
 #icon li a {
-    color: white;
-    text-decoration: none;
+    color: rgba(255, 255, 255, .7);
     font-size: 1.75rem;
+    transition: .2s ease-in-out;
 }
 
-@keyframes move {
-    from {
-        transform: rotate(45deg) translate(20px, 20px);
-        -webkit-transform: rotate(45deg) translate(20px 20px);
-        -moz-transform: rotate(45deg) translate(20px 20px);
-        -ms-transform: rotate(45deg) translate(20px 20px);
-        -o-transform: rotate(45deg) translate(20px 20px);
-        opacity: 1;
-    }
-
-    to {
-        transform: rotate(45deg) translate(0);
-        -webkit-transform: rotate(45deg) translate(0);
-        -moz-transform: rotate(45deg) translate(0);
-        -ms-transform: rotate(45deg) translate(0);
-        -o-transform: rotate(45deg) translate(0);
-        opacity: .1;
-    }
+#icon li a:hover {
+    color: #fff;
 }
 
-@-webkit-keyframes move {
-    from {
-        transform: rotate(45deg) translate(20px, 20px);
-        -webkit-transform: rotate(45deg) translate(20px 20px);
-        -moz-transform: rotate(45deg) translate(20px 20px);
-        -ms-transform: rotate(45deg) translate(20px 20px);
-        -o-transform: rotate(45deg) translate(20px 20px);
-        opacity: 1;
-    }
-
-    to {
-        transform: rotate(45deg) translate(0);
-        -webkit-transform: rotate(45deg) translate(0);
-        -moz-transform: rotate(45deg) translate(0);
-        -ms-transform: rotate(45deg) translate(0);
-        -o-transform: rotate(45deg) translate(0);
-        opacity: .1;
-    }
+#skils {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-content: center;
+    width: 50vw;
 }
 
-@-moz-keyframes move {
-    from {
-        transform: rotate(45deg) translate(20px, 20px);
-        -webkit-transform: rotate(45deg) translate(20px 20px);
-        -moz-transform: rotate(45deg) translate(20px 20px);
-        -ms-transform: rotate(45deg) translate(20px 20px);
-        -o-transform: rotate(45deg) translate(20px 20px);
-        opacity: 1;
-    }
-
-    to {
-        transform: rotate(45deg) translate(0);
-        -webkit-transform: rotate(45deg) translate(0);
-        -moz-transform: rotate(45deg) translate(0);
-        -ms-transform: rotate(45deg) translate(0);
-        -o-transform: rotate(45deg) translate(0);
-        opacity: .1;
-    }
+#skils img {
+    border-radius: 0;
+    margin: 0 7px;
+    cursor: pointer;
 }
 
-@-ms-keyframes move {
-    from {
-        transform: rotate(45deg) translate(20px, 20px);
-        -webkit-transform: rotate(45deg) translate(20px 20px);
-        -moz-transform: rotate(45deg) translate(20px 20px);
-        -ms-transform: rotate(45deg) translate(20px 20px);
-        -o-transform: rotate(45deg) translate(20px 20px);
-        opacity: 1;
-    }
-
-    to {
-        transform: rotate(45deg) translate(0);
-        -webkit-transform: rotate(45deg) translate(0);
-        -moz-transform: rotate(45deg) translate(0);
-        -ms-transform: rotate(45deg) translate(0);
-        -o-transform: rotate(45deg) translate(0);
-        opacity: .1;
-    }
-}
-
-@-o-keyframes move {
-    from {
-        transform: rotate(45deg) translate(20px, 20px);
-        -webkit-transform: rotate(45deg) translate(20px 20px);
-        -moz-transform: rotate(45deg) translate(20px 20px);
-        -ms-transform: rotate(45deg) translate(20px 20px);
-        -o-transform: rotate(45deg) translate(20px 20px);
-        opacity: 1;
-    }
-
-    to {
-        transform: rotate(45deg) translate(0);
-        -webkit-transform: rotate(45deg) translate(0);
-        -moz-transform: rotate(45deg) translate(0);
-        -ms-transform: rotate(45deg) translate(0);
-        -o-transform: rotate(45deg) translate(0);
-        opacity: .1;
-    }
+#skils img:active {
+    transform: scale(0.95);
 }
 
 .tooltip {
@@ -206,37 +193,75 @@ img, .icon-text, #main, #skils, #icon {
     background: none;
     color: #fff;
     text-align: center;
-    border-radius: 6px;
     padding: 5px 0;
     position: absolute;
     z-index: 1;
     top: 70px;
-    right: -25px;
+    right: -27.5px;
 }
 
 .tooltip:hover .tooltip-text {
     visibility: visible;
 }
 
-.projects {
+#projects {
     display: flex;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     align-items: center;
     justify-content: center;
+    flex-flow: row wrap;
+    align-content: center;
+    width: 85vw;
+    text-align: center;
+    font-family: 'Poppins', 'Nanum Gothic', sans-serif;
+}
+
+#projects > a {
+    color: #fff;
 }
 
 .project {
     background-color: #151922;
-    border: 1px solid white;
-    border-radius: 10px;
+    border: 1px solid #fff;
+    border-radius: 8px;
     padding: 10px;
     margin: 0 10px;
-    width: 17.5rem;
+    width: 15rem;
+    height: 4rem;
+    margin-bottom: 10px;
 }
 
 .project-title {
-    font-size: 1.1rem;
+    margin: 0 2px;
+}
+
+.project-description {
+    margin: .5rem 0;
+}
+
+#view-github {
+    color: #fff;
+    background-color: rgba(43, 43, 43, 0.7);
+    border-radius: 5px;
+    margin-top: .5rem;
+    padding: 7px 9px;
+    font-size: .95rem;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    transition: .1s ease-in;
+}
+
+#view-github:hover {
+    background-color: rgba(43, 43, 43, 0.9);
+}
+
+@keyframes move {
+    from {
+        transform: rotate(45deg) translate(20px, 20px);
+        opacity: 1;
+    }
+
+    to {
+        transform: rotate(45deg) translate(0);
+        opacity: 0;
+    }
 }

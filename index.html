@@ -6,27 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="ditto7890">
     <meta name="description" content="ditto7890 포트폴리오">
-    <meta name="og:type" content="website">
-    <meta name="og:site_name" content="ditto7890.xyz">
-    <meta name="og:title" content="ditto7890">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ditto7890.xyz">
+    <meta property="og:title" content="ditto7890">
     <meta property="og:description" content="ditto7890 포트폴리오">
     <meta property="og:image" content="https://ditto7890.xyz/img/favicon.png">
     <meta property="og:image:type" content="image/png">
     <meta name="theme-color" content="#333333">
-    <link rel="icon shortcut" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon shortcut" href="img/favicon.png" type="image/png">
     <title>ditto7890</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
     <link rel="stylesheet" href="index.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://threejs.org/build/three.min.js"></script>
 </head>
 
 <body>
     <div id="fullpage">
         <div class="section">
+            <div id="canvas"></div>
             <div id="main">
-                <img src="img/favicon.ico" alt="ditto7890's profile">
-                <h1 style="display: inline; vertical-align: middle;">ditto7890</h1>
+                <h2 id="profile">디토</h2>
+                <h1>ditto7890</h1>
             </div>
             <p>To be a Full Stack Developer</p>
             <ul id="icon">
@@ -56,7 +58,7 @@
                     </a>
                 </li>
             </ul>
-            <span class="arrow"></span>
+            <div class="arrow"></div>
         </div>
         <div class="section">
             <h2>Skills</h2>
@@ -77,24 +79,54 @@
                     <img src="https://www.typescriptlang.org/icons/icon-512x512.png" alt="typescript">
                     <span class="tooltip-text">TypeScript</span>
                 </div>
+                <div class="tooltip">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png" alt="python">
+                    <span class="tooltip-text">Python</span>
+                </div>
             </div>
         </div>
         <div class="section">
             <h2>Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <div class="project-title"><i class="fab fa-github"></i> 프로젝트</div>
-                </div>
-                <div class="project">
-                    <div class="project-title"><i class="fab fa-discord"></i> 프로젝트</div>
-                </div>
-                <div class="project">
-                    <div class="project-title"><i class="fab fa-github"></i> 프로젝트</div>
-                </div>
+            <div id="projects">
+                <a href="https://github.com/ditto7890/ditto7890.github.io" target="_blank">
+                    <div class="project">
+                        <h3 class="project-title"><i class="fab fa-github"></i> ditto7890.github.io</h3>
+                        <p class="project-description">ditto7890's portfolio</p>
+                    </div>
+                </a>
+                <a href="https://github.com/ditto7890/profile" target="_blank">
+                    <div class="project">
+                        <h3 class="project-title"><i class="fab fa-github"></i> profile</h3>
+                        <p class="project-description">프로필 사진 만들기</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="project">
+                        <h3 class="project-title"><i class="fab fa-github"></i> ...</h3>
+                        <p class="project-description">...</p>
+                    </div>
+                </a>
             </div>
+            <a href="https://github.com/ditto7890" target="_blank" id="view-github"><i class="fab fa-github"> 더 많은 프로젝트 보기</i></a>
         </div>
     </div>
-    <script defer src="index.js"></script>
+    <div id="tools">
+        <button id="settings">
+            <i class="fas fa-cog"></i>
+        </button>
+    </div>
+    <div id="settings-container">
+        <h2>설정</h2>
+        <p>이 정보는 localStorage에 저장합니다.</p>
+        <div style="display: none;">
+            <label for="background-setting">배경</label>
+            <input type="checkbox" id="background-setting">
+        </div>
+        <button id="setting-reset">
+            <i class="fas fa-redo"></i>
+        </button>
+    </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
