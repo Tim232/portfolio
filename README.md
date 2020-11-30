@@ -2,6 +2,6 @@
 
 ## 사용한 라이브러리
 
-[fullPage.js](https://github.com/alvarotrigo/fullPage.js/)
+* [fullPage.js](https://github.com/alvarotrigo/fullPage.js/)
 
-[three.js](https://github.com/mrdoob/three.js/)
+* [particles.js](https://github.com/VincentGarreau/particles.js/)

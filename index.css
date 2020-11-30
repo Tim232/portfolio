@@ -5,6 +5,7 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Black00.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 * {
@@ -79,8 +81,8 @@ button {
     /*
         https://codepen.io/n-sayenko/pen/qOXKVr
     */
-    background: linear-gradient(to bottom, rgba(117, 114, 113, 0.8) 10%, rgba(40, 49, 77, 0.8) 30%, rgba(29, 35, 71, 0.8) 50%, rgba(19, 25, 28, 0.8) 80%, rgba(15, 14, 14, .8) 95%, rgb(8, 5, 19) 100%)
-    , url('https://64.media.tumblr.com/tumblr_m00c3czJkM1qbukryo1_500.gif');
+    background: linear-gradient(to bottom, rgba(117, 114, 113, 0.8) 10%, rgba(40, 49, 77, 0.8) 30%, rgba(29, 35, 71, 0.8) 50%, rgba(19, 25, 28, 0.8) 80%, rgba(15, 14, 14, .8) 95%, rgb(8, 5, 19) 100%),
+        url('https://64.media.tumblr.com/tumblr_m00c3czJkM1qbukryo1_500.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -98,7 +100,7 @@ button {
     border: none;
     color: rgba(255, 255, 255, .8);
     font-size: 1.15rem;
-    transition: .2s ease-in-out;
+    transition: color .2s ease-in-out;
 }
 
 #settings:hover {
@@ -120,6 +122,7 @@ button {
     color: #fff;
     border: none;
     font-size: 1.25rem;
+    transition: transform .15s ease-in-out;
 }
 
 #setting-reset:active {
@@ -133,17 +136,20 @@ button {
     justify-content: center;
 }
 
+#settings-container > h2 {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
 .section:first-child {
     position: relative;
 }
 
-.section:first-child p {
+.section:first-child > p {
     font-size: 1.1rem;
     font-family: 'Poppins', sans-serif;
 }
 
 .arrow {
-    margin-top: 15px;
     width: 25px;
     height: 25px;
     border-right: 2.5px solid #fff;
@@ -157,6 +163,7 @@ button {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    margin-bottom: 7.5px;
 }
 
 #icon li {
@@ -167,7 +174,7 @@ button {
 #icon li a {
     color: rgba(255, 255, 255, .7);
     font-size: 1.75rem;
-    transition: .2s ease-in-out;
+    transition: color .2s ease-in-out;
 }
 
 #icon li a:hover {
@@ -180,16 +187,17 @@ button {
     justify-content: center;
     flex-flow: row wrap;
     align-content: center;
-    width: 50vw;
+    width: 75vw;
 }
 
-#skils img {
+.tooltip > img {
     border-radius: 0;
     margin: 0 7px;
     cursor: pointer;
+    transition: transform .25s ease-in-out;
 }
 
-#skils img:active {
+.tooltip > img:active {
     transform: scale(0.95);
 }
 
@@ -198,7 +206,7 @@ button {
     display: inline-block;
 }
 
-.tooltip .tooltip-text {
+.tooltip > span {
     visibility: hidden;
     width: 125px;
     background: none;
@@ -207,11 +215,11 @@ button {
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    top: 70px;
-    right: -27.5px;
+    top: 100%;
+    left: -37.5%;
 }
 
-.tooltip:hover .tooltip-text {
+.tooltip:hover > span {
     visibility: visible;
 }
 
@@ -221,7 +229,7 @@ button {
     justify-content: center;
     flex-flow: row wrap;
     align-content: center;
-    width: 85vw;
+    width: calc(90vw - 5rem);
     text-align: center;
     font-family: 'Poppins', 'Nanum Gothic', sans-serif;
 }
@@ -232,7 +240,7 @@ button {
 
 .project {
     background-color: #151922;
-    border: 1px solid #fff;
+    border: 1px solid rgb(220, 220, 220);
     border-radius: 8px;
     padding: 10px;
     margin: 0 10px;
@@ -241,28 +249,14 @@ button {
     margin-bottom: 10px;
 }
 
-.project-title {
+.project > h3 {
     margin: 0 2px;
 }
 
-.project-description {
+.project > p {
     margin: .5rem 0;
 }
 
-#view-github {
-    color: #fff;
-    background-color: rgba(43, 43, 43, 0.7);
-    border-radius: 5px;
-    margin-top: .5rem;
-    padding: 8px 10px;
-    font-size: .95rem;
-    font-family: 'Noto Sans KR', sans-serif;
-    transition: .1s ease-in;
-}
-
-#view-github:hover {
-    background-color: rgba(43, 43, 43, 0.9);
-}
 
 @keyframes move {
     0% {
